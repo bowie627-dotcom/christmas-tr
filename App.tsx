@@ -69,8 +69,8 @@ const App: React.FC = () => {
 
   // 初始化背景音乐
   useEffect(() => {
-    // 使用本地背景音乐文件
-    const audio = new Audio('/audio/background-music.mp3');
+    // 使用本地背景音乐文件 - 适配GitHub Pages路径
+    const audio = new Audio('./audio/background-music.mp3');
     audio.loop = true;
     audio.volume = 0.4;
     bgAudioRef.current = audio;
@@ -99,8 +99,8 @@ const App: React.FC = () => {
     
     // 播放点击反馈音效 (魔法闪烁)
     try {
-      // 使用本地点击音效文件
-      const sparkleAudio = new Audio('/audio/click-sound.mp3');
+      // 使用本地点击音效文件 - 适配GitHub Pages路径
+      const sparkleAudio = new Audio('./audio/click-sound.mp3');
       sparkleAudio.volume = 0.6;
       sparkleAudio.play();
     } catch (e) {}
